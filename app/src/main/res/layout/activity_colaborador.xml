@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Colaborador"
+    tools:ignore="ExtraText">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/barradeacessibilidade"
+        style="@style/barradeacessibilidade"
+        android:background="@drawable/barradeacessibilidade"
+        android:text="@string/barra_de_acessibilidade"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        android:drawableStart="@drawable/ic_baseline_arrow_back"
+        android:text="Voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
+
+    <TextView
+        android:id="@+id/txt_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="13dp"
+        android:text="Empresa S.A."
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/elipso_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/elipsebase"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/elipso_base2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/ellipse"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="31dp"/>
+
+    <TextView
+        android:id="@+id/txt_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/nome_colaborador"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elipso_base" />
+
+    <TextView
+        android:id="@+id/txt_cargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/nome_cargo"
+        android:textColor="@color/hortaviva"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+
+    <View
+        android:id="@+id/base_box1"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/basebox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cargo" />
+
+    <TextView
+        android:id="@+id/title_carteira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Carteira"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toTopOf="@+id/base_box1" />
+
+    <TextView
+        android:id="@+id/values_carteira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="R$ 350/800"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/base_box1"
+        app:layout_constraintTop_toTopOf="@+id/title_carteira" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="100"
+        android:progress="33"
+        android:progressBackgroundTint="@color/hortaviva_fourth"
+        android:progressTint="@color/hortaviva"
+        android:scaleX="7.5"
+        android:scaleY="4"
+        app:layout_constraintEnd_toEndOf="@+id/base_box1"
+        app:layout_constraintStart_toStartOf="@+id/base_box1"
+        app:layout_constraintTop_toBottomOf="@+id/title_carteira" />
+
+    <TextView
+        android:id="@+id/title_consumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Consumo"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/base_box1" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBarConsumo1"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:progress="70"
+        android:progressBackgroundTint="@color/base_Box"
+        android:progressTint="@color/blue_secondary"
+        android:rotation="-90"
+        android:scaleX="3"
+        android:scaleY="9"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@+id/title_consumo"
+        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+    <TextView
+        android:id="@+id/consumo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Mai/2022"
+        android:textColor="@color/hortaviva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo1"
+        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo1"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo1" />
+
+    <ProgressBar
+        android:id="@+id/progressBarConsumo2"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:progress="85"
+        android:progressBackgroundTint="@color/base_Box"
+        android:progressTint="@color/blue_secondary"
+        android:rotation="-90"
+        android:scaleX="3"
+        android:scaleY="9"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo1"
+        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+    <TextView
+        android:id="@+id/consumo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Jun/2022"
+        android:textColor="@color/hortaviva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo2"
+        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo2" />
+
+    <ProgressBar
+        android:id="@+id/progressBarConsumo3"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:progress="90"
+        android:progressBackgroundTint="@color/base_Box"
+        android:progressTint="@color/blue_secondary"
+        android:rotation="-90"
+        android:scaleX="3"
+        android:scaleY="9"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo2"
+        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+    <TextView
+        android:id="@+id/consumo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Jul/2022"
+        android:textColor="@color/hortaviva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo3"
+        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo3"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo3" />
+
+    <ProgressBar
+        android:id="@+id/progressBarConsumo4"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:progress="80"
+        android:progressBackgroundTint="@color/base_Box"
+        android:progressTint="@color/blue_secondary"
+        android:rotation="-90"
+        android:scaleX="3"
+        android:scaleY="9"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo3"
+        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+    <TextView
+        android:id="@+id/consumo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Ago/2022"
+        android:textColor="@color/hortaviva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo4"
+        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo4"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo4" />
+
+    <ProgressBar
+        android:id="@+id/progressBarConsumo5"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:progress="100"
+        android:progressBackgroundTint="@color/yellow"
+        android:progressTint="@color/yellow"
+        android:rotation="-90"
+        android:scaleX="3"
+        android:scaleY="9"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo4"
+        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+    <TextView
+        android:id="@+id/consumo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Set/2022"
+        android:textColor="@color/hortaviva"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo5"
+        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo5"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
