@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Colaborador"
@@ -24,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:background="#00FFFFFF"
         android:drawableStart="@drawable/ic_baseline_arrow_back"
         android:text="Voltar"
@@ -49,21 +55,21 @@
         android:id="@+id/elipso_base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:src="@drawable/elipsebase"
-        app:layout_constraintTop_toBottomOf="@id/back"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back"/>
 
     <ImageView
         android:id="@+id/elipso_base2"
         android:layout_width="140dp"
         android:layout_height="140dp"
+        android:layout_marginTop="31dp"
         android:src="@drawable/ellipse"
-        app:layout_constraintTop_toBottomOf="@+id/back"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="31dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"/>
 
     <TextView
         android:id="@+id/txt_nome"
@@ -103,8 +109,8 @@
         android:id="@+id/title_carteira"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Carteira"
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
@@ -156,6 +162,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:max="100"
         android:progress="70"
@@ -164,7 +171,6 @@
         android:rotation="-90"
         android:scaleX="3"
         android:scaleY="9"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toStartOf="@+id/title_consumo"
         app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
@@ -185,6 +191,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:max="100"
         android:progress="85"
@@ -193,7 +200,6 @@
         android:rotation="-90"
         android:scaleX="3"
         android:scaleY="9"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toEndOf="@+id/progressBarConsumo1"
         app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
@@ -214,6 +220,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:max="100"
         android:progress="90"
@@ -222,7 +229,6 @@
         android:rotation="-90"
         android:scaleX="3"
         android:scaleY="9"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toEndOf="@+id/progressBarConsumo2"
         app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
@@ -243,6 +249,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:max="100"
         android:progress="80"
@@ -251,7 +258,6 @@
         android:rotation="-90"
         android:scaleX="3"
         android:scaleY="9"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toEndOf="@+id/progressBarConsumo3"
         app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
@@ -272,6 +278,7 @@
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:max="100"
         android:progress="100"
@@ -280,7 +287,6 @@
         android:rotation="-90"
         android:scaleX="3"
         android:scaleY="9"
-        android:layout_marginStart="24dp"
         app:layout_constraintStart_toEndOf="@+id/progressBarConsumo4"
         app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
@@ -296,6 +302,191 @@
         app:layout_constraintStart_toStartOf="@+id/progressBarConsumo5"
         app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo5" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        style="@style/Button3"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button3"
+        android:text="Seus Dados"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consumo3"/>
 
+    <TextView
+        android:id="@+id/title_Seus_Pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Seus Pedidos"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/txt_ordenar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ordenar"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/values_carteira"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+
+    <View
+        android:id="@+id/baseboxcompra"
+        android:layout_width="370dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/baseboxcompra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_Seus_Pedidos" />
+
+    <ImageView
+        android:id="@+id/image_last_purchase"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cestaindividual"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcompra"
+        app:layout_constraintTop_toTopOf="@id/baseboxcompra" />
+
+    <TextView
+        android:id="@+id/title_lastbucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Cesta Individual"
+        android:textColor="@color/hortaviva"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+        app:layout_constraintTop_toTopOf="@id/image_last_purchase" />
+
+    <TextView
+        android:id="@+id/title_type_last_bucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Frutas"
+        android:textColor="@color/hortaviva"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+        app:layout_constraintTop_toBottomOf="@id/title_lastbucket" />
+
+    <TextView
+        android:id="@+id/title_type_last_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="R$ 29,00"
+        android:textColor="@color/hortaviva"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+        app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4"
+        style="@style/Button4"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button4"
+        android:text="Comprar Novamente"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_last_purchase"/>
+
+    <View
+        android:id="@+id/baseboxcompra2"
+        android:layout_width="370dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/baseboxcompra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra" />
+
+    <ImageView
+        android:id="@+id/image_last_purchase2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cestamista"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcompra2"
+        app:layout_constraintTop_toTopOf="@id/baseboxcompra2" />
+
+    <TextView
+        android:id="@+id/title_lastbucket2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Cesta Família"
+        android:textColor="@color/hortaviva"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+        app:layout_constraintTop_toTopOf="@id/image_last_purchase2" />
+
+    <TextView
+        android:id="@+id/title_type_last_bucket2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Mista"
+        android:textColor="@color/hortaviva"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+        app:layout_constraintTop_toBottomOf="@id/title_lastbucket2" />
+
+    <TextView
+        android:id="@+id/title_type_last_price2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="R$ 79,00"
+        android:textColor="@color/hortaviva"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+        app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        style="@style/Button4"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button4"
+        android:text="Agendado"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_last_purchase2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6"
+        style="@style/Button3"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/button3"
+        android:text="Ver Tudo"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
