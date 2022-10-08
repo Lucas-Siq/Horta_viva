@@ -500,7 +500,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -510,10 +509,12 @@
         app:itemIconTint="@color/hortaviva"
         app:itemTextColor="@color/hortaviva"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu"/>
+        app:menu="@menu/menu"
+        tools:layout_editor_absoluteY="681dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
