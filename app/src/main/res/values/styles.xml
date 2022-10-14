@@ -5,6 +5,12 @@
         <item name="android:layout_height">150dp</item>
         <item name="android:background">@drawable/container_components</item>
     </style>
+
+    <style name="ContainerComponentsLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">450dp</item>
+        <item name="android:background">@drawable/container_components</item>
+    </style>
     
     <style name="Button">
         <item name="android:layout_width">167dp</item>

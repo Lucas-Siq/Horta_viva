@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import br.com.horta_viva.fragments.Empresa
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,10 +13,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide();
         setContentView(R.layout.activity_main)
 
+
         val button: Button = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.button)
 
         button.setOnClickListener{
-            val i = Intent(this, Colaborador::class.java)
+            val i = Intent(this, loginColaborador::class.java)
             startActivity(i)
         }
 
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this, Empresa::class.java)
             startActivity(i)
         }
+
     }
 
 }

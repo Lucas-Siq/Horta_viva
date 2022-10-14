@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
+    <View
         android:id="@+id/background_start1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_start"
-        app:layout_constraintBottom_toTopOf="@+id/background_start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/background_start"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <View
         android:id="@+id/background_start"
@@ -66,6 +64,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/hortaviva"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="100dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
