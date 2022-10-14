@@ -4,28 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginColaborador">
+    tools:context=".loginEmpresa">
 
     <View
-        android:id="@+id/bannerboasvindas"
+        android:id="@+id/bannerboasvindasempresa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bannerboasvindas"
-        app:layout_constraintBottom_toTopOf="@id/background_start_login"
+        app:layout_constraintBottom_toTopOf="@id/background_start_login_empresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/title_hortaviva_login"
+        android:id="@+id/title_hortaviva_login_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/hortaviva"
-        app:layout_constraintBottom_toBottomOf="@+id/bannerboasvindas"
+        app:layout_constraintBottom_toBottomOf="@+id/bannerboasvindasempresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/bannerboasvindas" />
+        app:layout_constraintTop_toTopOf="@id/bannerboasvindasempresa" />
 
     <ImageView
         android:id="@+id/subtitle_boasvindas_empresa"
@@ -36,29 +36,29 @@
         android:background="@drawable/boas_vindas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_hortaviva_login" />
+        app:layout_constraintTop_toBottomOf="@id/title_hortaviva_login_empresa" />
 
     <View
-        android:id="@+id/background_start_login"
+        android:id="@+id/background_start_login_empresa"
         style="@style/ContainerComponentsLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/title_acesso_colaborador"
+        android:id="@+id/title_acesso_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Acesso do colaborador"
+        android:text="Acesso da Empresa"
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/background_start_login"/>
+        app:layout_constraintTop_toTopOf="@id/background_start_login_empresa"/>
 
     <TextView
-        android:id="@+id/label_email_acesso_colaborador"
+        android:id="@+id/label_email_acesso_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -68,10 +68,10 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_acesso_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/title_acesso_empresa"/>
 
     <EditText
-        android:id="@+id/edt_login_colaborador"
+        android:id="@+id/edt_login_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Seu E-mail aqui"
@@ -81,10 +81,10 @@
         android:background="@drawable/container_form"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_email_acesso_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/label_email_acesso_empresa"/>
 
     <TextView
-        android:id="@+id/label_senha_acesso_colaborador"
+        android:id="@+id/label_senha_acesso_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -94,10 +94,10 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_login_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_login_empresa"/>
 
     <EditText
-        android:id="@+id/edt_senha_colaborador"
+        android:id="@+id/edt_senha_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Sua Senha aqui"
@@ -107,10 +107,10 @@
         android:background="@drawable/container_form"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_senha_acesso_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/label_senha_acesso_empresa"/>
 
     <TextView
-        android:id="@+id/button_esqueceu_senha_colaborador"
+        android:id="@+id/button_esqueceu_senha_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Esqueceu sua senha?"
@@ -118,25 +118,25 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@id/edt_senha_colaborador"
-        app:layout_constraintEnd_toEndOf="@id/edt_senha_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_senha_empresa"
+        app:layout_constraintEnd_toEndOf="@id/edt_senha_empresa"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
+        android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/button5"
+        android:background="@drawable/button6"
         android:text="Acessar"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"
         android:layout_marginTop="26dp"
-        app:layout_constraintTop_toBottomOf="@+id/button_esqueceu_senha_colaborador"
+        app:layout_constraintTop_toBottomOf="@+id/button_esqueceu_senha_empresa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/button_cadastro_colaborador"
+        android:id="@+id/button_cadastro_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Não tem cadastro? Cadastre-se aqui"
@@ -144,10 +144,8 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@id/button5"
+        app:layout_constraintTop_toBottomOf="@id/button6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
