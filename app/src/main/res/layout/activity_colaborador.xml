@@ -15,8 +15,6 @@
     tools:ignore="ExtraText">
 
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/barradeacessibilidade"
         style="@style/barradeacessibilidade"

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class loginColaborador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,5 +18,13 @@ class loginColaborador : AppCompatActivity() {
             val i = Intent(this, Colaborador::class.java)
             startActivity(i)
         }
+
+        val buttoncadastroColaborador: TextView = findViewById<TextView>(R.id.button_cadastro_colaborador)
+
+        buttoncadastroColaborador.setOnClickListener{
+            val i = Intent(this, cadastroColaborador::class.java)
+            startActivity(i)
+        }
+
     }
 }

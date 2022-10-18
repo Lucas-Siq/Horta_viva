@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "133493315126",
+    "project_id": "horta-viva-a9212",
+    "storage_bucket": "horta-viva-a9212.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133493315126:android:b42f34cf75a27a1ef7aa97",
+        "android_client_info": {
+          "package_name": "br.com.horta_viva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133493315126-0db3uv45l21fl83a3pe1ujpe9ghbarl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVjMhC_dFPS95i1jJy5JdFnun9O_bw5e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133493315126-0db3uv45l21fl83a3pe1ujpe9ghbarl6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
