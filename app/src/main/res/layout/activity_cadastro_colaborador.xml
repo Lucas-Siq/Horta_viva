@@ -13,395 +13,431 @@
         tools:context=".Colaborador"
         tools:ignore="ExtraText">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/barradeacessibilidade"
-        style="@style/barradeacessibilidade"
-        android:background="@drawable/barradeacessibilidade"
-        android:text="@string/barra_de_acessibilidade"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/barradeacessibilidade"
+            style="@style/barradeacessibilidade"
+            android:background="@drawable/barradeacessibilidade"
+            android:text="@string/barra_de_acessibilidade"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/backLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/ic_baseline_arrow_back"
-        android:text="Voltar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
-
-    <TextView
-        android:id="@+id/txt_empresacadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="13dp"
-        android:text="Empresa S.A."
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/backLogin"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/title_CadastroColaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="13dp"
-        android:text="Cadastrar colaborador"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/backLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <ImageView
-        android:id="@+id/img_selected_photo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/photo_profile"
-        android:layout_marginTop="25dp"
-        app:circularflow_radiusInDP="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/title_CadastroColaborador" />
-
-    <TextView
-        android:id="@+id/button_pick_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alterar Imagem"
-        android:background="@color/white"
-        android:textColor="@color/hortaviva"
-        app:layout_constraintTop_toBottomOf="@id/img_selected_photo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/label_cpf_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="20dp"
-        android:text="CPF"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_pick_image"/>
-
-    <EditText
-        android:id="@+id/edt_cpf_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="568.965.874-55"
-        android:maxLength="14"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="number"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_cpf_cadastro_colaborador"/>
-
-    <TextView
-        android:id="@+id/label_nome_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="20dp"
-        android:text="Nome Completo"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_cpf_colaborador"/>
-
-    <EditText
-        android:id="@+id/edt_nome_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Julia da Silva"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:maxLength="36"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_nome_cadastro_colaborador"/>
-
-    <TextView
-        android:id="@+id/label_email_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="20dp"
-        android:text="E-mail"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_nome_colaborador"/>
-
-    <EditText
-        android:id="@+id/edt_email_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Julia@empresa.com"
-        android:maxLength="36"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_email_cadastro_colaborador"/>
-
-    <TextView
-        android:id="@+id/label_senha_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="20dp"
-        android:text="Senha"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_email_cadastro_colaborador"/>
-
-    <EditText
-        android:id="@+id/edt_senha_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="************"
-        android:maxLength="36"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="textPassword"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_senha_cadastro_colaborador"/>
-
-    <TextView
-        android:id="@+id/label_cargo_cadastro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginStart="20dp"
-        android:text="Cargo"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_senha_cadastro_colaborador"/>
-
-    <EditText
-        android:id="@+id/edt_cargo_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Auxiliar Administrativo"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:maxLength="36"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_cargo_cadastro_colaborador"/>
-
-    <TextView
-        android:id="@+id/label_cep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CEP"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_cargo_colaborador"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp"
-        />
-
-    <EditText
-        android:id="@+id/edt_cep_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint=" 05881-005"
-        android:maxLength="9"
-        android:inputType="number"
-        android:layout_marginTop="8dp"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        app:layout_constraintTop_toBottomOf="@+id/label_cep"
-        app:layout_constraintStart_toStartOf="@id/label_cep"
-        android:background="@drawable/container_form"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:drawableStart="@drawable/ic_baseline_arrow_back"
+            android:text="Voltar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
 
 
-    <TextView
-        android:id="@+id/label_rua_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rua"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_cep_colaborador"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp" />
+        <TextView
+            android:id="@+id/title_CadastroColaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="13dp"
+            android:text="Cadastrar colaborador"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backLogin" />
 
-    <EditText
-        android:id="@+id/edt_rua_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ex: Av. Augusto Oscar"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_rua_colaborador"/>
+        <ImageView
+            android:id="@+id/img_selected_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/photo_profile"
+            app:circularflow_radiusInDP="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_CadastroColaborador" />
 
-    <TextView
-        android:id="@+id/label_bairro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bairro"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_rua_colaborador"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp" />
+        <TextView
+            android:id="@+id/button_pick_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:text="Alterar Imagem"
+            android:textColor="@color/hortaviva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_selected_photo" />
 
-    <EditText
-        android:id="@+id/edt_bairro_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ex: Jardim Paulista   "
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form2"
-        app:layout_constraintStart_toStartOf="@id/label_bairro_colaborador"
-        app:layout_constraintTop_toBottomOf="@id/label_bairro_colaborador"/>
+        <TextView
+            android:id="@+id/label_cpf_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="CPF"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_pick_image" />
 
-    <TextView
-        android:id="@+id/label_numerocasa_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nº"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/label_bairro_colaborador"
-        app:layout_constraintBottom_toBottomOf="@id/label_bairro_colaborador"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="180dp" />
+        <EditText
+            android:id="@+id/edt_cpf_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="568.965.874-55"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_cpf_cadastro_colaborador" />
 
-    <EditText
-        android:id="@+id/edt_numerocasa_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ex: 6586"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="number"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form3"
-        app:layout_constraintStart_toStartOf="@id/label_numerocasa_colaborador"
-        app:layout_constraintTop_toBottomOf="@id/label_numerocasa_colaborador"/>
+        <TextView
+            android:id="@+id/label_nome_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="Nome Completo"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_cpf_colaborador" />
 
-    <TextView
-        android:id="@+id/label_cidade_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cidade"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_bairro_colaborador"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp" />
+        <EditText
+            android:id="@+id/edt_nome_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="Julia da Silva"
+            android:inputType="text"
+            android:maxLength="36"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_nome_cadastro_colaborador" />
 
-    <EditText
-        android:id="@+id/edt_cidade_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ex: São Paulo"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form2"
-        app:layout_constraintStart_toStartOf="@id/label_cidade_colaborador"
-        app:layout_constraintTop_toBottomOf="@id/label_cidade_colaborador"/>
+        <TextView
+            android:id="@+id/label_email_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="E-mail"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_nome_colaborador" />
 
-    <TextView
-        android:id="@+id/label_uf_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UF"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@id/label_numerocasa_colaborador"
-        app:layout_constraintBottom_toBottomOf="@id/label_cidade_colaborador"
-        android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/edt_email_cadastro_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="Julia@empresa.com"
+            android:inputType="textEmailAddress"
+            android:maxLength="36"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_email_cadastro_colaborador" />
 
-    <EditText
-        android:id="@+id/edt_uf_colaborador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Ex: SP"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:inputType="text"
-        android:textAllCaps="true"
-        android:maxLength="2"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form3"
-        app:layout_constraintStart_toStartOf="@id/label_uf_colaborador"
-        app:layout_constraintTop_toBottomOf="@id/label_uf_colaborador"/>
+        <TextView
+            android:id="@+id/label_senha_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="Senha"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_email_cadastro_colaborador" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_salvaralteracoes_colaborador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button7"
-        app:layout_constraintTop_toBottomOf="@+id/edt_cidade_colaborador"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Salvar Alterações"
-        android:textColor="@color/white"
-        android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/edt_senha_cadastro_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="************"
+            android:inputType="textPassword"
+            android:maxLength="36"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_senha_cadastro_colaborador" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintTop_toBottomOf="@+id/button_salvaralteracoes_colaborador"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        <TextView
+            android:id="@+id/label_confirme_senha_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="Confirme a Senha"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_senha_cadastro_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_confirme_senha_cadastro_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="************"
+            android:inputType="textPassword"
+            android:maxLength="36"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_confirme_senha_cadastro_colaborador" />
+
+        <TextView
+            android:id="@+id/label_cargo_cadastro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:text="Cargo"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_confirme_senha_cadastro_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_cargo_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="Auxiliar Administrativo"
+            android:inputType="text"
+            android:maxLength="36"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_cargo_cadastro_colaborador" />
+
+        <TextView
+            android:id="@+id/label_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="CEP"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_cargo_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_cep_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint=" 05881-005"
+            android:inputType="number"
+            android:maxLength="8"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintStart_toStartOf="@id/label_cep"
+            app:layout_constraintTop_toBottomOf="@+id/label_cep" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/label_rua_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Rua"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_cep_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_rua_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form"
+            android:hint="Ex: Av. Augusto Oscar"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_rua_colaborador" />
+
+        <TextView
+            android:id="@+id/label_bairro_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Bairro"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_rua_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_bairro_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="160dp"
+            android:background="@drawable/container_form2"
+            android:hint="Ex: Jardim Paulista   "
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintStart_toStartOf="@id/label_bairro_colaborador"
+            app:layout_constraintTop_toBottomOf="@id/label_bairro_colaborador" />
+
+        <TextView
+            android:id="@+id/label_numerocasa_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="24dp"
+            android:text="Nº"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/label_bairro_colaborador"
+            app:layout_constraintStart_toEndOf="@id/label_bairro_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_numerocasa_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form3"
+            android:hint="Ex: 6586"
+            android:inputType="number"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintStart_toStartOf="@id/label_numerocasa_colaborador"
+            app:layout_constraintTop_toBottomOf="@id/label_numerocasa_colaborador" />
+
+        <TextView
+            android:id="@+id/label_cidade_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Cidade"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_bairro_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_cidade_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="160dp"
+            android:background="@drawable/container_form2"
+            android:hint="Ex: São Paulo"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintStart_toStartOf="@id/label_cidade_colaborador"
+            app:layout_constraintTop_toBottomOf="@id/label_cidade_colaborador" />
+
+        <TextView
+            android:id="@+id/label_uf_colaborador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="UF"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/label_cidade_colaborador"
+            app:layout_constraintStart_toStartOf="@id/label_numerocasa_colaborador" />
+
+        <EditText
+            android:id="@+id/edt_uf_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/container_form3"
+            android:hint="Ex: SP"
+            android:inputType="text"
+            android:maxLength="2"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="@id/label_uf_colaborador"
+            app:layout_constraintTop_toBottomOf="@id/label_uf_colaborador" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_salvaralteracoes_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button7"
+            android:text="Salvar Alterações"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_cidade_colaborador" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_salvaralteracoes_colaborador" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

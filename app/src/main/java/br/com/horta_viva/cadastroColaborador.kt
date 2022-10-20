@@ -1,16 +1,31 @@
 package br.com.horta_viva
 
+import android.app.ProgressDialog.show
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.ColorSpace
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import br.com.horta_viva.databinding.ActivityCadastroColaboradorBinding
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.FirebaseNetworkException
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 
 class cadastroColaborador : AppCompatActivity() {
 
     private lateinit var textView: TextView
     private lateinit var imageView: ImageView
+    private lateinit var binding: ActivityCadastroColaboradorBinding
+    private val auth = FirebaseAuth.getInstance()
 
     companion object {
         val IMAGE_REQUEST_CODE = 100
@@ -19,20 +34,83 @@ class cadastroColaborador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide();
-        setContentView(R.layout.activity_cadastro_colaborador)
+        binding = ActivityCadastroColaboradorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
-        val backLogin: Button = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.backLogin)
+//Botão Voltar
+        val backLogin: Button =
+            findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.backLogin)
 
-        backLogin.setOnClickListener{
+        backLogin.setOnClickListener {
             val i = Intent(this, loginColaborador::class.java)
             startActivity(i)
         }
 
+//Validar cadastro
+        binding.buttonSalvaralteracoesColaborador.setOnClickListener{ view ->
+            val cpf = binding.edtCpfColaborador.text.toString()
+            val nome = binding.edtNomeColaborador.text.toString()
+            val email = binding.edtEmailCadastroColaborador.text.toString()
+            val senha = binding.edtSenhaCadastroColaborador.text.toString()
+            val confirmeSenha = binding.edtConfirmeSenhaCadastroColaborador.text.toString()
+            val cargo = binding.edtCargoColaborador.text.toString()
+            val cep = binding.edtCepColaborador.text.toString()
+            val rua = binding.edtRuaColaborador.text.toString()
+            val bairro = binding.edtBairroColaborador.text.toString()
+            val numeroCasa = binding.edtNumerocasaColaborador.text.toString()
+            val cidade = binding.edtCidadeColaborador.text.toString()
+            val uf = binding.edtUfColaborador.text.toString()
+
+            if (cpf.isEmpty() || nome.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmeSenha.isEmpty() || cargo.isEmpty() || cep.isEmpty() ||
+                rua.isEmpty() || bairro.isEmpty() || numeroCasa.isEmpty() || cidade.isEmpty() || uf.isEmpty()){
+                val snackbarCadastro = Snackbar.make(view, "Preencha todos os campos!", Snackbar.LENGTH_SHORT)
+                snackbarCadastro.setBackgroundTint(Color.RED)
+                snackbarCadastro.show()
+            }else if(senha != confirmeSenha){ val snackbarCadastro2 = Snackbar.make(view, "A Senha não confere!", Snackbar.LENGTH_SHORT)
+                snackbarCadastro2.setBackgroundTint(Color.RED)
+                snackbarCadastro2.show()
+            }else {
+                auth.createUserWithEmailAndPassword(email,senha).addOnCompleteListener {cadastro ->
+                    if (cadastro.isSuccessful){
+                        val snackbarCadastro = Snackbar.make(view, "Usuário Cadastrado!", Snackbar.LENGTH_SHORT)
+                        snackbarCadastro.setBackgroundTint(Color.GREEN)
+                        snackbarCadastro.show()
+                        binding.edtCpfColaborador.setText("")
+                        binding.edtNomeColaborador.setText("")
+                        binding.edtEmailCadastroColaborador.setText("")
+                        binding.edtSenhaCadastroColaborador.setText("")
+                        binding.edtConfirmeSenhaCadastroColaborador.setText("")
+                        binding.edtCargoColaborador.setText("")
+                        binding.edtCepColaborador.setText("")
+                        binding.edtRuaColaborador.setText("")
+                        binding.edtBairroColaborador.setText("")
+                        binding.edtNumerocasaColaborador.setText("")
+                        binding.edtCidadeColaborador.setText("")
+                        binding.edtUfColaborador.setText("")
+                    }
+                }.addOnFailureListener{ exception ->
+
+                    val mensagemErro = when(exception){
+                        is FirebaseAuthWeakPasswordException -> "Digite uma senha com no mínimo 6 caracteres!"
+                        is FirebaseAuthInvalidCredentialsException -> "Digite um e-mail válido!"
+                        is FirebaseAuthUserCollisionException -> "Esta conta já está cadastrada!"
+                        is FirebaseNetworkException -> "Sem conexão com a Internet!"
+                        else -> "Erro ao cadastrar usuário!"
+                    }
+                    val snackbarCadastro = Snackbar.make(view,mensagemErro, Snackbar.LENGTH_SHORT)
+                    snackbarCadastro.setBackgroundTint(Color.RED)
+                    snackbarCadastro.show()
+                }
+            }
+
+        }
+
+        //Escolher Imagem
         textView = findViewById(R.id.button_pick_image)
         imageView = findViewById(R.id.img_selected_photo)
 
-        textView.setOnClickListener{
+        textView.setOnClickListener {
             pickImageGallery()
         }
     }
@@ -51,3 +129,4 @@ class cadastroColaborador : AppCompatActivity() {
     }
 
 }
+

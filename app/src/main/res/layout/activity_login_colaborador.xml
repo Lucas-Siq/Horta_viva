@@ -49,110 +49,114 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Acesso do colaborador"
+        android:text="@string/title_login_activity"
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/background_start_login"/>
+        app:layout_constraintTop_toTopOf="@id/background_start_login" />
 
     <TextView
         android:id="@+id/label_email_acesso_colaborador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:layout_marginStart="20dp"
-        android:text="E-mail"
+        android:layout_marginTop="22dp"
+        android:text="@string/label_email_login_activity"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_acesso_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/title_acesso_colaborador" />
 
     <EditText
         android:id="@+id/edt_login_colaborador"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Seu E-mail aqui"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/container_form"
+        android:hint="@string/hint_email_loginActivity"
+        android:inputType="textEmailAddress"
         android:maxLength="36"
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_email_acesso_colaborador"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_email_acesso_colaborador" />
 
     <TextView
         android:id="@+id/label_senha_acesso_colaborador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:layout_marginStart="20dp"
-        android:text="Senha"
+        android:layout_marginTop="22dp"
+        android:text="@string/label_senha_loginActivity"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_login_colaborador"/>
+        app:layout_constraintTop_toBottomOf="@id/edt_login_colaborador" />
 
     <EditText
         android:id="@+id/edt_senha_colaborador"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Sua Senha aqui"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/container_form"
+        android:hint="@string/hint_senha_loginActivity"
+        android:inputType="textPassword"
         android:maxLength="36"
         android:paddingStart="18dp"
         android:paddingEnd="18dp"
-        android:inputType="textPassword"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/container_form"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_senha_acesso_colaborador"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_senha_acesso_colaborador" />
 
     <TextView
         android:id="@+id/button_esqueceu_senha_colaborador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Esqueceu sua senha?"
+        android:layout_marginTop="14dp"
+        android:text="@string/button_esqueceu_sua_senha"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@id/edt_senha_colaborador"
-        app:layout_constraintEnd_toEndOf="@id/edt_senha_colaborador"/>
+        app:layout_constraintEnd_toEndOf="@id/edt_senha_colaborador"
+        app:layout_constraintTop_toBottomOf="@id/edt_senha_colaborador" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button5"
-        android:text="Acessar"
-
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="18sp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="26dp"
-        app:layout_constraintTop_toBottomOf="@+id/button_esqueceu_senha_colaborador"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button5"
+        android:text="@string/button_acessar_colaboradorActivity"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/button_esqueceu_senha_colaborador" />
 
     <TextView
         android:id="@+id/button_cadastro_colaborador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Não tem cadastro? Cadastre-se aqui"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
         android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@id/button5"
+        android:text="@string/button_cadastroActivity"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+        app:layout_constraintTop_toBottomOf="@id/button5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,58 +12,40 @@
         android:layout_height="wrap_content"
         android:background="@drawable/background_start"
         app:layout_constraintBottom_toTopOf="@id/background_start"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/background_start"
-        style="@style/ContainerComponents"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/acessar"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Acessar"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button2"
+        android:text="@string/button_activity_colaborador"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/background_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_start" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        style="@style/Button"
-        android:layout_marginTop="1dp"
-        android:background="@drawable/button"
-        android:text="Colaborador"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/background_start"
-        app:layout_constraintStart_toStartOf="@+id/background_start"
-        app:layout_constraintTop_toBottomOf="@+id/acessar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
-        style="@style/Button2"
-        android:background="@drawable/button2"
-        android:text="Empresa"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/background_start"
-        app:layout_constraintEnd_toEndOf="@+id/background_start"
-        app:layout_constraintTop_toBottomOf="@+id/acessar" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/title_homepage_horta_viva"
+        android:src="@drawable/hortaviva"
         app:layout_constraintBottom_toTopOf="@+id/background_start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/hortaviva"
-        android:layout_marginBottom="100dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

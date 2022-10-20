@@ -22,12 +22,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
 
-        val button2: Button = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.button2)
-
-        button2.setOnClickListener{
-            val i = Intent(this, loginEmpresa::class.java)
-            startActivity(i)
-        }
 
     }
 

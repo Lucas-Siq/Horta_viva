@@ -29,11 +29,6 @@
         <item name="android:layout_height">47dp</item>
     </style>
 
-    <style name="Button3">
-        <item name="android:layout_width">370dp</item>
-        <item name="android:layout_height">46dp</item>
-    </style>
-
     <style name="Baseboxcompra">
         <item name="android:layout_width">370dp</item>
         <item name="android:layout_height">217dp</item>

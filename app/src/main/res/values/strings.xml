@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Horta_viva</string>
+    <string name="app_name">Horta Viva</string>
     <string name="barra_de_acessibilidade">Barra de Acessibilidade</string>
     <string name="nome_colaborador">Bruna da Silva</string>
     <string name="nome_cargo">Analista de RH</string>
@@ -7,4 +7,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="button_activity_colaborador">Acessar</string>
+    <string name="button_activity_empresa">Empresa</string>
+    <string name="title_homepage_horta_viva">Horta Viva</string>
+    <string name="title_login_activity">Acesso do colaborador</string>
+    <string name="label_email_login_activity">E-mail</string>
+    <string name="hint_email_loginActivity">Seu E-mail aqui</string>
+    <string name="label_senha_loginActivity">Senha</string>
+    <string name="hint_senha_loginActivity">Sua Senha aqui</string>
+    <string name="button_esqueceu_sua_senha">Esqueceu sua senha?</string>
+    <string name="button_acessar_colaboradorActivity">Acessar</string>
+    <string name="button_cadastroActivity">Não tem cadastro? Cadastre-se aqui</string>
 </resources>
