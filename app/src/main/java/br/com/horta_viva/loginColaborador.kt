@@ -51,7 +51,7 @@ class loginColaborador : AppCompatActivity() {
 
     }
     private fun navegarTelaPrincipal(){
-        val intent = Intent(this,Colaborador::class.java)
+        val intent = Intent(this,home::class.java)
         startActivity(intent)
         finish()
     }

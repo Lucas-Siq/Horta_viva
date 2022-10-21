@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/barradeacessibilidade"
+        style="@style/barradeacessibilidade"
+        android:background="@drawable/barradeacessibilidade"
+        android:text="@string/barra_de_acessibilidade"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:textColor="@color/hortaviva"
+        android:drawableStart="@drawable/ic_baseline_arrow_back_2"
+        android:text="@string/button_logout_homeActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
+
+    <TextView
+        android:id="@+id/txt_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/title_empresa_colaborador"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_logout"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_atalhos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:text="Atalhos"
+        android:textStyle="bold"
+        android:textColor="@color/hortaviva"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_logout" />
+
+    <TextView
+        android:id="@+id/icon_agendamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:text="Agendamentos"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_atalhos"
+        app:drawableTopCompat="@drawable/agendamento" />
+
+    <TextView
+        android:id="@+id/icon_loja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text=" Loja"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_atalhos"
+        app:drawableTopCompat="@drawable/icon_loja" />
+
+    <TextView
+        android:id="@+id/icon_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:text="Perfil"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        android:drawableTop="@drawable/icon_perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/icon_agendamentos"
+        app:layout_constraintTop_toBottomOf="@+id/icon_agendamentos" />
+
+    <TextView
+        android:id="@+id/icon_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="Mais"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        android:drawableTop="@drawable/icon_add"
+        app:layout_constraintStart_toStartOf="@id/icon_loja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_loja" />
+
+    <View
+        android:id="@+id/baseboxcompra2"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/baseboxcompra"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_perfil" />
+
+
+    <TextView
+        android:id="@+id/title_cesta_familia_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cesta tamanho família"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/hortaviva"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/baseboxcompra2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagem_cesta_familia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_cesta_familia_home"
+        android:background="@drawable/imagem_cesta_tamanho_familia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_compra_home1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button4"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="80dp"
+        android:text="Eu Quero"
+        android:textColor="@color/hortaviva"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/baseboxcompra2"
+        />
+
+    <View
+        android:id="@+id/baseboxcompra3"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/baseboxcompra"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra2" />
+
+
+    <TextView
+        android:id="@+id/title_cesta_frutas_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cesta de frutas"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/hortaviva"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/baseboxcompra3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagem_cesta_frutas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_cesta_frutas_home"
+        android:background="@drawable/imagem_cesta_tamanho_familia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_compra_home2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button4"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="80dp"
+        android:text="Eu Quero"
+        android:textColor="@color/hortaviva"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/baseboxcompra3"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

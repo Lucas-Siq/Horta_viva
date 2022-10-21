@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Horta_viva"
         tools:targetApi="31">
-
+        <activity
+            android:name=".home"
+            android:exported="false" />
         <activity
             android:name=".cadastroColaborador"
             android:exported="false" />
