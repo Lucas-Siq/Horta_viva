@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginStart="30dp"
-        android:text="Atalhos"
+        android:text="@string/title_atalhos"
         android:textStyle="bold"
         android:textColor="@color/hortaviva"
         android:textSize="24sp"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
-        android:text="Agendamentos"
+        android:text="@string/button_agendamentos_home"
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:text=" Loja"
+        android:text="@string/button_loja_home"
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,13 +98,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
-        android:text="Perfil"
+        android:text="@string/button_perfil_home"
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
-        android:drawableTop="@drawable/icon_perfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@id/icon_agendamentos"
-        app:layout_constraintTop_toBottomOf="@+id/icon_agendamentos" />
+        app:layout_constraintTop_toBottomOf="@+id/icon_agendamentos"
+        app:drawableTopCompat="@drawable/icon_perfil" />
 
     <TextView
         android:id="@+id/icon_add"
@@ -112,13 +112,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
-        android:text="Mais"
+        android:text="@string/button_mais_home"
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
-        android:drawableTop="@drawable/icon_add"
         app:layout_constraintStart_toStartOf="@id/icon_loja"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_loja" />
+        app:layout_constraintTop_toBottomOf="@+id/icon_loja"
+        app:drawableTopCompat="@drawable/icon_add" />
 
     <View
         android:id="@+id/baseboxcompra2"
@@ -137,7 +137,7 @@
         android:id="@+id/title_cesta_familia_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cesta tamanho família"
+        android:text="@string/title_card_cesta_tamanho_familia"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="@color/hortaviva"
@@ -153,7 +153,8 @@
         app:layout_constraintTop_toBottomOf="@id/title_cesta_familia_home"
         android:background="@drawable/imagem_cesta_tamanho_familia"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/descricao_imagem_cesta_tamanho_familia" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_compra_home1"
@@ -163,9 +164,9 @@
         android:layout_marginStart="80dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="80dp"
-        android:text="Eu Quero"
+        android:text="@string/button_eu_quero"
         android:textColor="@color/hortaviva"
-        android:textStyle="bold"
+
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,7 +190,7 @@
         android:id="@+id/title_cesta_frutas_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cesta de frutas"
+        android:text="@string/title_card_cesta_de_frutas"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textColor="@color/hortaviva"
@@ -203,7 +204,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title_cesta_frutas_home"
-        android:background="@drawable/imagem_cesta_tamanho_familia"
+        android:background="@drawable/imagem_cesta_frutas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -215,14 +216,87 @@
         android:layout_marginStart="80dp"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="80dp"
-        android:text="Eu Quero"
+        android:text="@string/button_eu_quero"
         android:textColor="@color/hortaviva"
-        android:textStyle="bold"
+
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/baseboxcompra3"
         />
 
+
+    <View
+        android:id="@+id/baseboxcompra4"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/baseboxcompra"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra3" />
+
+
+    <TextView
+        android:id="@+id/title_cesta_mista_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_card_cesta_mista"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/hortaviva"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="@id/baseboxcompra4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagem_cesta_mista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_cesta_mista_home"
+        android:background="@drawable/imagem_cesta_mista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/descricao_imagem_cesta_mista" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_compra_home3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button4"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/button_eu_quero"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/baseboxcompra4"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_compra_home3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/hortaviva"
+        app:itemTextColor="@color/hortaviva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        tools:layout_editor_absoluteY="681dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

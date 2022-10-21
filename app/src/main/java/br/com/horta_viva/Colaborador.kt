@@ -14,7 +14,7 @@ class Colaborador : AppCompatActivity() {
         val back: Button = findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.back)
 
         back.setOnClickListener{
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, home::class.java)
             startActivity(i)
         }
 

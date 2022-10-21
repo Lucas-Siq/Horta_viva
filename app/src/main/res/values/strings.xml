@@ -45,4 +45,15 @@
     <string name="button_agendado">Agendado</string>
     <string name="button_ver_tudo">Ver Tudo</string>
     <string name="button_logout_homeActivity">Logout</string>
+    <string name="title_atalhos">Atalhos</string>
+    <string name="button_agendamentos_home">Agendamentos</string>
+    <string name="button_loja_home">Loja</string>
+    <string name="button_perfil_home">Perfil</string>
+    <string name="button_mais_home">Mais</string>
+    <string name="title_card_cesta_tamanho_familia">Cesta tamanho família</string>
+    <string name="button_eu_quero">Eu Quero</string>
+    <string name="title_card_cesta_de_frutas">Cesta de frutas</string>
+    <string name="title_card_cesta_mista">Cesta mista</string>
+    <string name="descricao_imagem_cesta_tamanho_familia">Cesta tamanho familia</string>
+    <string name="descricao_imagem_cesta_mista">Cesta mista</string>
 </resources>

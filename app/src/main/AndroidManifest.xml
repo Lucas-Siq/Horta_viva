@@ -16,25 +16,40 @@
         android:theme="@style/Theme.Horta_viva"
         tools:targetApi="31">
         <activity
+            android:name=".agendamento"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".loja"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
             android:name=".home"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".cadastroColaborador"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".loginEmpresa"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".loginColaborador"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".fragments.Empresa"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".Colaborador"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

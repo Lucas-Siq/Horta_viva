@@ -55,4 +55,13 @@ class loginColaborador : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    override fun onStart() {
+        super.onStart()
+        val usuarioAtual = FirebaseAuth.getInstance().currentUser
+
+        if (usuarioAtual != null){
+            navegarTelaPrincipal()
+        }
+    }
 }
