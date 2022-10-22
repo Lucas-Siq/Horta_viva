@@ -56,4 +56,9 @@
     <string name="title_card_cesta_mista">Cesta mista</string>
     <string name="descricao_imagem_cesta_tamanho_familia">Cesta tamanho familia</string>
     <string name="descricao_imagem_cesta_mista">Cesta mista</string>
+    <string name="identificador_home">Home</string>
+    <string name="identificador_loja">Loja</string>
+    <string name="identificador_perfil">Perfil</string>
+    <string name="identificador_agendamento">Agendamento</string>
+
 </resources>

@@ -23,6 +23,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/identificador_loja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:background="#00FFFFFF"
+        android:textSize="18sp"
+        android:textColor="@color/hortaviva"
+        android:text="@string/identificador_loja"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade"
+        app:drawableStartCompat="@drawable/icon_loja_24dp"
+        android:drawablePadding="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/title_empresa_colaborador"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/identificador_loja"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

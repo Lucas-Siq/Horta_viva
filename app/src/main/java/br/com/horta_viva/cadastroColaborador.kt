@@ -7,6 +7,7 @@ import android.graphics.ColorSpace
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -19,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import com.google.firebase.firestore.FirebaseFirestore
 
 class cadastroColaborador : AppCompatActivity() {
 
@@ -26,6 +28,7 @@ class cadastroColaborador : AppCompatActivity() {
     private lateinit var imageView: ImageView
     private lateinit var binding: ActivityCadastroColaboradorBinding
     private val auth = FirebaseAuth.getInstance()
+    private val db = FirebaseFirestore.getInstance()
 
     companion object {
         val IMAGE_REQUEST_CODE = 100
@@ -73,6 +76,28 @@ class cadastroColaborador : AppCompatActivity() {
             }else {
                 auth.createUserWithEmailAndPassword(email,senha).addOnCompleteListener {cadastro ->
                     if (cadastro.isSuccessful){
+                        val usuariosMap = hashMapOf(
+                            "cpf" to cpf,
+                            "nomeCompleto" to nome,
+                            "email" to email,
+                            "senha" to senha,
+                            "cargo" to cargo,
+                            "cep" to cep,
+                            "rua" to rua,
+                            "bairro" to bairro,
+                            "numeroCasa" to numeroCasa,
+                            "cidade" to cidade,
+                            "uf" to uf,
+                        )
+
+                        db.collection("Usuarios").document(email)
+                            .set(usuariosMap).addOnCompleteListener {
+                                Log.d("db","Sucesso ao salvar os dados do usuário!")
+                            }.addOnFailureListener{
+
+                            }
+
+
                         val snackbarCadastro = Snackbar.make(view, "Usuário Cadastrado!", Snackbar.LENGTH_SHORT)
                         snackbarCadastro.setBackgroundTint(Color.GREEN)
                         snackbarCadastro.show()

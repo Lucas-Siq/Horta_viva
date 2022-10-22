@@ -47,6 +47,7 @@ class loginColaborador : AppCompatActivity() {
         buttoncadastroColaborador.setOnClickListener{
             val i = Intent(this, cadastroColaborador::class.java)
             startActivity(i)
+            finish()
         }
 
     }
@@ -62,6 +63,8 @@ class loginColaborador : AppCompatActivity() {
 
         if (usuarioAtual != null){
             navegarTelaPrincipal()
+            finish()
         }
     }
+
 }

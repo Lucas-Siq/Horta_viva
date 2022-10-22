@@ -8,543 +8,556 @@
     android:fillViewport="true">
 
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Colaborador"
-    tools:ignore="ExtraText">
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/barradeacessibilidade"
-        style="@style/barradeacessibilidade"
-        android:background="@drawable/barradeacessibilidade"
-        android:text="@string/barra_de_acessibilidade"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:drawableStart="@drawable/ic_baseline_arrow_back"
-        android:text="@string/button_voltar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
-
-    <TextView
-        android:id="@+id/txt_empresa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="13dp"
-        android:text="@string/title_empresa_colaborador"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/back"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <ImageView
-        android:id="@+id/elipso_base"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/elipsebase"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back"
-        android:contentDescription="@string/base_foto_perfil_colaboradorActivity" />
-
-    <ImageView
-        android:id="@+id/elipso_base2"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="31dp"
-        android:src="@drawable/ellipse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back"
-        android:contentDescription="@string/foto_perfil_colaboradorActivity" />
-
-    <TextView
-        android:id="@+id/txt_nome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/nome_colaborador"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/elipso_base" />
-
-    <TextView
-        android:id="@+id/txt_cargo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/nome_cargo"
-        android:textColor="@color/hortaviva"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
-
-    <View
-        android:id="@+id/base_box1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/basebox"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_cargo" />
-
-    <TextView
-        android:id="@+id/title_carteira"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/title_carteira_colaboradorActivity"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/back"
-        app:layout_constraintTop_toTopOf="@+id/base_box1" />
-
-    <TextView
-        android:id="@+id/values_carteira"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="@string/valor_carteira_colaboradorActivity"
-        android:textColor="@color/hortaviva"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/base_box1"
-        app:layout_constraintTop_toTopOf="@+id/title_carteira" />
+        android:layout_height="match_parent"
+        tools:context=".Colaborador"
+        tools:ignore="ExtraText">
 
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:max="100"
-        android:progress="33"
-        android:progressBackgroundTint="@color/hortaviva_fourth"
-        android:progressTint="@color/hortaviva"
-        android:scaleX="0.9"
-        android:scaleY="4"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/base_box1"
-        app:layout_constraintStart_toStartOf="@+id/base_box1"
-        app:layout_constraintTop_toBottomOf="@+id/title_carteira" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/barradeacessibilidade"
+            style="@style/barradeacessibilidade"
+            android:background="@drawable/barradeacessibilidade"
+            android:text="@string/barra_de_acessibilidade"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/title_consumo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/title_consumo_colaboradorActivity"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/base_box1"
-        app:layout_constraintTop_toBottomOf="@+id/base_box1" />
+        <TextView
+            android:id="@+id/identificador_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:textSize="18sp"
+            android:textColor="@color/hortaviva"
+            android:text="@string/identificador_perfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade"
+            app:drawableStartCompat="@drawable/person24dp"
+            android:drawablePadding="10dp"/>
 
 
-    <ProgressBar
-        android:id="@+id/progressBarConsumo1"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:max="100"
-        android:progress="70"
-        android:progressBackgroundTint="@color/base_Box"
-        android:progressTint="@color/blue_secondary"
-        android:rotation="-90"
-        android:scaleX="3"
-        android:scaleY="9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/progressBarConsumo2"
-        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:drawableStart="@drawable/ic_baseline_arrow_back"
+            android:text="@string/button_voltar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/identificador_perfil" />
 
-    <TextView
-        android:id="@+id/consumo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/data_consumo_primeiro_mes"
-        android:textColor="@color/hortaviva"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo1"
-        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo1"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo1" />
+        <TextView
+            android:id="@+id/txt_empresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="18dp"
 
-    <ProgressBar
-        android:id="@+id/progressBarConsumo2"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:max="100"
-        android:progress="85"
-        android:progressBackgroundTint="@color/base_Box"
-        android:progressTint="@color/blue_secondary"
-        android:rotation="-90"
-        android:scaleX="3"
-        android:scaleY="9"
-        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo1"
-        app:layout_constraintEnd_toStartOf="@id/progressBarConsumo3"
-        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+            android:text="@string/title_empresa_colaborador"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/identificador_perfil"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/consumo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/data_consumo_segundo_mes"
-        android:textColor="@color/hortaviva"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo2"
-        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo2"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo2" />
+        <ImageView
+            android:id="@+id/elipso_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/base_foto_perfil_colaboradorActivity"
+            android:src="@drawable/elipsebase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back" />
 
-    <ProgressBar
-        android:id="@+id/progressBarConsumo3"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:max="100"
-        android:progress="90"
-        android:progressBackgroundTint="@color/base_Box"
-        android:progressTint="@color/blue_secondary"
-        android:rotation="-90"
-        android:scaleX="3"
-        android:scaleY="9"
-        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo2"
-        app:layout_constraintEnd_toStartOf="@id/progressBarConsumo4"
-        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+        <ImageView
+            android:id="@+id/elipso_base2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="31dp"
+            android:contentDescription="@string/foto_perfil_colaboradorActivity"
+            android:src="@drawable/photo_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
 
-    <TextView
-        android:id="@+id/consumo3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/data_consumo_terceiro_mes"
-        android:textColor="@color/hortaviva"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo3"
-        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo3"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo3" />
+        <TextView
+            android:id="@+id/txt_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/nome_colaborador"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elipso_base" />
 
-    <ProgressBar
-        android:id="@+id/progressBarConsumo4"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="60dp"
-        android:max="100"
-        android:progress="80"
-        android:progressBackgroundTint="@color/base_Box"
-        android:progressTint="@color/blue_secondary"
-        android:rotation="-90"
-        android:scaleX="3"
-        android:scaleY="9"
-        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo3"
-        app:layout_constraintEnd_toStartOf="@id/progressBarConsumo5"
-        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+        <TextView
+            android:id="@+id/txt_cargo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/nome_cargo"
+            android:textColor="@color/hortaviva"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
 
-    <TextView
-        android:id="@+id/consumo4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/data_consumo_quarto_mes"
-        android:textColor="@color/hortaviva"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo4"
-        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo4"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo4" />
+        <View
+            android:id="@+id/base_box1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/basebox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cargo" />
 
-    <ProgressBar
-        android:id="@+id/progressBarConsumo5"
-        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="60dp"
-        android:max="100"
-        android:progress="100"
-        android:progressBackgroundTint="@color/yellow"
-        android:progressTint="@color/yellow"
-        android:rotation="-90"
-        android:scaleX="3"
-        android:scaleY="9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/progressBarConsumo4"
-        app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+        <TextView
+            android:id="@+id/title_carteira"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_carteira_colaboradorActivity"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintTop_toTopOf="@+id/base_box1" />
 
-    <TextView
-        android:id="@+id/consumo5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="@string/data_consumo_mes_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo5"
-        app:layout_constraintStart_toStartOf="@+id/progressBarConsumo5"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo5" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/button3"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button3"
-        android:text="@string/button_seusDados_colaboradorActivity"
-        android:textColor="@color/hortaviva"
-        android:textSize="16sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumo3"/>
-
-    <TextView
-        android:id="@+id/title_Seus_Pedidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/title_seus_pedidos"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/title_consumo"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <TextView
-        android:id="@+id/txt_ordenar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/button_ordenar_pedidos"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/values_carteira"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <TextView
+            android:id="@+id/values_carteira"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/valor_carteira_colaboradorActivity"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/base_box1"
+            app:layout_constraintTop_toTopOf="@+id/title_carteira" />
 
 
-    <View
-        android:id="@+id/baseboxcompra"
-        android:layout_width="match_parent"
-        android:layout_height="237dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/baseboxcompra"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_Seus_Pedidos" />
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:max="100"
+            android:progress="33"
+            android:progressBackgroundTint="@color/hortaviva_fourth"
+            android:progressTint="@color/hortaviva"
+            android:scaleX="0.9"
+            android:scaleY="4"
+            app:layout_constraintEnd_toEndOf="@+id/base_box1"
+            app:layout_constraintStart_toStartOf="@+id/base_box1"
+            app:layout_constraintTop_toBottomOf="@+id/title_carteira" />
 
-    <ImageView
-        android:id="@+id/image_last_purchase"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/cestaindividual"
-        app:layout_constraintStart_toStartOf="@+id/baseboxcompra"
-        app:layout_constraintTop_toTopOf="@id/baseboxcompra"
-        android:contentDescription="@string/descricao_imagem_cesta_mais_recente" />
-
-    <TextView
-        android:id="@+id/title_lastbucket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/title_cesta_mais_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
-        app:layout_constraintTop_toTopOf="@id/image_last_purchase" />
-
-    <TextView
-        android:id="@+id/title_type_last_bucket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/tipo_cesta_mais_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
-        app:layout_constraintTop_toBottomOf="@id/title_lastbucket" />
-
-    <TextView
-        android:id="@+id/title_type_last_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/valor_cesta_mais_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
-        app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket" />
+        <TextView
+            android:id="@+id/title_consumo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/title_consumo_colaboradorActivity"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/base_box1"
+            app:layout_constraintTop_toBottomOf="@+id/base_box1" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/button4"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/button4"
-        android:text="@string/button_comprar_novamente"
-        android:textColor="@color/hortaviva"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_last_purchase"/>
+        <ProgressBar
+            android:id="@+id/progressBarConsumo1"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:max="100"
+            android:progress="70"
+            android:progressBackgroundTint="@color/base_Box"
+            android:progressTint="@color/blue_secondary"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="9"
+            app:layout_constraintEnd_toStartOf="@id/progressBarConsumo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
-    <View
-        android:id="@+id/baseboxcompra2"
-        android:layout_width="match_parent"
-        android:layout_height="237dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/baseboxcompra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra" />
+        <TextView
+            android:id="@+id/consumo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/data_consumo_primeiro_mes"
+            android:textColor="@color/hortaviva"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo1"
+            app:layout_constraintStart_toStartOf="@+id/progressBarConsumo1"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo1" />
 
-    <ImageView
-        android:id="@+id/image_last_purchase2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/cestamista"
-        app:layout_constraintStart_toStartOf="@+id/baseboxcompra2"
-        app:layout_constraintTop_toTopOf="@id/baseboxcompra2"
-        android:contentDescription="@string/descricao_imagem_cesta_menos_recente" />
+        <ProgressBar
+            android:id="@+id/progressBarConsumo2"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:max="100"
+            android:progress="85"
+            android:progressBackgroundTint="@color/base_Box"
+            android:progressTint="@color/blue_secondary"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="9"
+            app:layout_constraintEnd_toStartOf="@id/progressBarConsumo3"
+            app:layout_constraintStart_toEndOf="@+id/progressBarConsumo1"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
-    <TextView
-        android:id="@+id/title_lastbucket2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/title_cesta_menos_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
-        app:layout_constraintTop_toTopOf="@id/image_last_purchase2" />
+        <TextView
+            android:id="@+id/consumo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/data_consumo_segundo_mes"
+            android:textColor="@color/hortaviva"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo2"
+            app:layout_constraintStart_toStartOf="@+id/progressBarConsumo2"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo2" />
 
-    <TextView
-        android:id="@+id/title_type_last_bucket2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/tipo_cesta_menos_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
-        app:layout_constraintTop_toBottomOf="@id/title_lastbucket2" />
+        <ProgressBar
+            android:id="@+id/progressBarConsumo3"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:max="100"
+            android:progress="90"
+            android:progressBackgroundTint="@color/base_Box"
+            android:progressTint="@color/blue_secondary"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="9"
+            app:layout_constraintEnd_toStartOf="@id/progressBarConsumo4"
+            app:layout_constraintStart_toEndOf="@+id/progressBarConsumo2"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
 
-    <TextView
-        android:id="@+id/title_type_last_price2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/valor_cesta_menos_recente"
-        android:textColor="@color/hortaviva"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
-        app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket2" />
+        <TextView
+            android:id="@+id/consumo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/data_consumo_terceiro_mes"
+            android:textColor="@color/hortaviva"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo3"
+            app:layout_constraintStart_toStartOf="@+id/progressBarConsumo3"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo3" />
+
+        <ProgressBar
+            android:id="@+id/progressBarConsumo4"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:max="100"
+            android:progress="80"
+            android:progressBackgroundTint="@color/base_Box"
+            android:progressTint="@color/blue_secondary"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="9"
+            app:layout_constraintEnd_toStartOf="@id/progressBarConsumo5"
+            app:layout_constraintStart_toEndOf="@+id/progressBarConsumo3"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+        <TextView
+            android:id="@+id/consumo4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/data_consumo_quarto_mes"
+            android:textColor="@color/hortaviva"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo4"
+            app:layout_constraintStart_toStartOf="@+id/progressBarConsumo4"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo4" />
+
+        <ProgressBar
+            android:id="@+id/progressBarConsumo5"
+            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
+            android:max="100"
+            android:progress="100"
+            android:progressBackgroundTint="@color/yellow"
+            android:progressTint="@color/yellow"
+            android:rotation="-90"
+            android:scaleX="3"
+            android:scaleY="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/progressBarConsumo4"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo" />
+
+        <TextView
+            android:id="@+id/consumo5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/data_consumo_mes_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarConsumo5"
+            app:layout_constraintStart_toStartOf="@+id/progressBarConsumo5"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarConsumo5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button3"
+            android:text="@string/button_seusDados_colaboradorActivity"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consumo3" />
+
+        <TextView
+            android:id="@+id/title_Seus_Pedidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/title_seus_pedidos"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/title_consumo"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <TextView
+            android:id="@+id/txt_ordenar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_ordenar_pedidos"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/values_carteira"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_height="50dp"
-        android:layout_width="match_parent"
-        android:id="@+id/button5"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/button4"
-        android:text="@string/button_agendado"
-        android:textColor="@color/hortaviva"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_last_purchase2"/>
+        <View
+            android:id="@+id/baseboxcompra"
+            android:layout_width="match_parent"
+            android:layout_height="237dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/baseboxcompra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_Seus_Pedidos" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_height="50dp"
-        android:layout_width="match_parent"
-        android:id="@+id/button6"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/button3"
-        android:text="@string/button_ver_tudo"
-        android:textColor="@color/hortaviva"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/baseboxcompra2"/>
+        <ImageView
+            android:id="@+id/image_last_purchase"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/descricao_imagem_cesta_mais_recente"
+            android:src="@drawable/cestaindividual"
+            app:layout_constraintStart_toStartOf="@+id/baseboxcompra"
+            app:layout_constraintTop_toTopOf="@id/baseboxcompra" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        <TextView
+            android:id="@+id/title_lastbucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title_cesta_mais_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+            app:layout_constraintTop_toTopOf="@id/image_last_purchase" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/hortaviva"
-        app:itemTextColor="@color/hortaviva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu"
-        tools:layout_editor_absoluteY="681dp" />
+        <TextView
+            android:id="@+id/title_type_last_bucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tipo_cesta_mais_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+            app:layout_constraintTop_toBottomOf="@id/title_lastbucket" />
+
+        <TextView
+            android:id="@+id/title_type_last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/valor_cesta_mais_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase"
+            app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket" />
 
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/button4"
+            android:text="@string/button_comprar_novamente"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_last_purchase" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/baseboxcompra2"
+            android:layout_width="match_parent"
+            android:layout_height="237dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/baseboxcompra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/baseboxcompra" />
+
+        <ImageView
+            android:id="@+id/image_last_purchase2"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/descricao_imagem_cesta_menos_recente"
+            android:src="@drawable/cestamista"
+            app:layout_constraintStart_toStartOf="@+id/baseboxcompra2"
+            app:layout_constraintTop_toTopOf="@id/baseboxcompra2" />
+
+        <TextView
+            android:id="@+id/title_lastbucket2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/title_cesta_menos_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+            app:layout_constraintTop_toTopOf="@id/image_last_purchase2" />
+
+        <TextView
+            android:id="@+id/title_type_last_bucket2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tipo_cesta_menos_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+            app:layout_constraintTop_toBottomOf="@id/title_lastbucket2" />
+
+        <TextView
+            android:id="@+id/title_type_last_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/valor_cesta_menos_recente"
+            android:textColor="@color/hortaviva"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image_last_purchase2"
+            app:layout_constraintTop_toBottomOf="@id/title_type_last_bucket2" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/button4"
+            android:text="@string/button_agendado"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_last_purchase2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="84dp"
+            android:background="@drawable/button3"
+            android:text="@string/button_ver_tudo"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/baseboxcompra2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/windowBackground"
+            app:itemIconTint="@color/hortaviva"
+            app:itemTextColor="@color/hortaviva"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu"
+            tools:layout_editor_absoluteY="681dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.core.widget.NestedScrollView>
