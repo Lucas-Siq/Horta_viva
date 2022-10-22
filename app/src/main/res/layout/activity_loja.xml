@@ -7,64 +7,405 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".loja">
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/barradeacessibilidade"
-        style="@style/barradeacessibilidade"
-        android:background="@drawable/barradeacessibilidade"
-        android:text="@string/barra_de_acessibilidade"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/identificador_loja"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:background="#00FFFFFF"
-        android:textSize="18sp"
-        android:textColor="@color/hortaviva"
-        android:text="@string/identificador_loja"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade"
-        app:drawableStartCompat="@drawable/icon_loja_24dp"
-        android:drawablePadding="10dp"/>
-
-    <TextView
-        android:id="@+id/txt_empresa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:text="@string/title_empresa_colaborador"
-        android:textColor="@color/hortaviva"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/identificador_loja"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/hortaviva"
-        app:itemTextColor="@color/hortaviva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu"
-        tools:layout_editor_absoluteY="681dp" />
+        android:layout_height="match_parent"
+        tools:context=".loja">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/barradeacessibilidade"
+            style="@style/barradeacessibilidade"
+            android:background="@drawable/barradeacessibilidade"
+            android:text="@string/barra_de_acessibilidade"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/identificador_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:drawablePadding="10dp"
+            android:text="@string/identificador_loja"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/icon_loja_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barradeacessibilidade" />
+
+        <TextView
+            android:id="@+id/txt_empresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/title_empresa_colaborador"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/identificador_loja"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="#00FFFFFF"
+            android:drawableStart="@drawable/ic_baseline_arrow_back"
+            android:text="@string/button_voltar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/identificador_loja" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imagem_frutas_loja"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/imagem_frutas_loja"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back" />
+
+        <View
+            android:id="@+id/base_card_imagem_loja"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="-2dp"
+            android:background="@color/hortaviva_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_frutas_loja" />
+
+        <TextView
+            android:id="@+id/title_card_frutas_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Agende as entregas"
+            android:textColor="@color/hortaviva"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/base_card_imagem_loja" />
+
+        <TextView
+            android:id="@+id/txt_card_frutas_loja"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Escolha o tamanho e tipo de cestas deseja. Agende o dia que deseja receber em sua casa. Simples assim!"
+            android:textColor="@color/hortaviva"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_card_frutas_loja" />
+
+        <TextView
+            android:id="@+id/title_radio_cestas_loja"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Selecione o tamanho da sua cesta:"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/base_card_imagem_loja" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_grupo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_radio_cestas_loja">
+
+            <RadioButton
+                android:id="@+id/radio_button_individual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:shadowColor="@color/hortaviva"
+                android:text="Individual"
+                android:textColor="@color/hortaviva"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_button_casal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:shadowColor="@color/hortaviva"
+                android:text="Casal"
+                android:textColor="@color/hortaviva"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_button_familia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:shadowColor="@color/hortaviva"
+                android:text="Família"
+                android:textColor="@color/hortaviva"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/descricao_cesta_individual"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-20dp"
+            android:text="Cesta com 3kg de produtos orgânicos"
+            app:layout_constraintStart_toStartOf="@+id/radio_grupo"
+            app:layout_constraintTop_toBottomOf="@+id/radio_grupo" />
+
+        <TextView
+            android:id="@+id/descricao_cesta_casal"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-20dp"
+            android:text="Cesta com 5kg de produtos orgânicos"
+            app:layout_constraintEnd_toStartOf="@id/descricao_cesta_familia"
+            app:layout_constraintStart_toEndOf="@+id/descricao_cesta_individual"
+            app:layout_constraintTop_toBottomOf="@+id/radio_grupo" />
+
+        <TextView
+            android:id="@+id/descricao_cesta_familia"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-20dp"
+            android:text="Cesta com 7kg de produtos orgânicos"
+            app:layout_constraintEnd_toEndOf="@+id/radio_grupo"
+            app:layout_constraintStart_toEndOf="@+id/descricao_cesta_casal"
+            app:layout_constraintTop_toBottomOf="@+id/radio_grupo" />
+
+        <View
+            android:id="@+id/divider_loja"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/hortaviva"
+            app:layout_constraintTop_toBottomOf="@id/descricao_cesta_familia" />
+
+        <TextView
+            android:id="@+id/title_radio_itens_loja"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="O que você gostaria que viesse na sua cesta?"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja" />
+
+        <TextView
+            android:id="@+id/descricao_title_radio_itens_loja"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Atenção: Devido à sazonalidade dos produtos, para chegar tudo fresquinho na sua mesa, nossas cestas são aleatórias, ok?"
+            android:textColor="@color/hortaviva_fourth"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_radio_itens_loja" />
+
+        <RadioGroup
+            android:id="@+id/radio_grupo2"
+            android:layout_width="wrap_content"
+            android:layout_height="420dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descricao_title_radio_itens_loja">
+
+            <RadioButton
+                android:id="@+id/radio_button_frutas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_legumes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp" />
+
+            <RadioButton
+                android:id="@+id/radio_button_mista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imagem_frutas_radio_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/imagem_frutas_radio_loja"
+            app:layout_constraintStart_toEndOf="@id/radio_grupo2"
+            app:layout_constraintTop_toTopOf="@id/radio_grupo2" />
+
+        <View
+            android:id="@+id/base_texto_radio1_itens"
+            android:layout_width="98dp"
+            android:layout_height="25dp"
+            android:background="@color/hortaviva_secondary"
+            app:layout_constraintStart_toStartOf="@id/imagem_frutas_radio_loja"
+            app:layout_constraintTop_toBottomOf="@id/imagem_frutas_radio_loja" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frutas"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/base_texto_radio1_itens"
+            app:layout_constraintStart_toStartOf="@id/base_texto_radio1_itens"
+            app:layout_constraintTop_toTopOf="@id/base_texto_radio1_itens" />
+
+        <TextView
+            android:id="@+id/descricao_itens_radio_frutas_loja"
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            android:textColor="@color/hortaviva"
+            android:text="Banana Prata (600gr - 800gr) \nLimão Taiti (500gr) \nLaranja Pera (800gr) \nMexerica Bergamota (600gr) \nAbacaxi Orgânico (uni) \nMelão Amarelo (uni)"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@id/imagem_frutas_radio_loja"
+            app:layout_constraintStart_toEndOf="@id/imagem_frutas_radio_loja"/>
+
+        <ImageView
+            android:id="@+id/imagem_legumes_radio_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/imagem_radio_legumes_loja"
+            app:layout_constraintStart_toEndOf="@id/radio_grupo2"
+            app:layout_constraintTop_toBottomOf="@id/imagem_frutas_radio_loja" />
+
+        <View
+            android:id="@+id/base_texto_radio2_itens"
+            android:layout_width="98dp"
+            android:layout_height="25dp"
+            android:background="@color/hortaviva_secondary"
+            app:layout_constraintStart_toStartOf="@id/imagem_legumes_radio_loja"
+            app:layout_constraintTop_toBottomOf="@id/imagem_legumes_radio_loja" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Legumes"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/base_texto_radio2_itens"
+            app:layout_constraintStart_toStartOf="@id/base_texto_radio2_itens"
+            app:layout_constraintTop_toTopOf="@id/base_texto_radio2_itens" />
+
+        <TextView
+            android:id="@+id/descricao_itens_radio_legumes_loja"
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            android:textColor="@color/hortaviva"
+            android:text="Brócols Japônes (uni) \nAlface Crespa (Uni) \nRepolho Liso (300gr - 450gr) \nErva Cidreira (Uni) \nRúcula (uni) \nCouve Flor (uni)"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@id/imagem_legumes_radio_loja"
+            app:layout_constraintStart_toEndOf="@id/imagem_legumes_radio_loja"/>
+
+        <ImageView
+            android:id="@+id/imagem_mista_radio_loja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/imagem_radio_legumes_loja"
+            app:layout_constraintStart_toEndOf="@id/radio_grupo2"
+            app:layout_constraintTop_toBottomOf="@id/imagem_legumes_radio_loja" />
+
+        <View
+            android:id="@+id/base_texto_radio3_itens"
+            android:layout_width="98dp"
+            android:layout_height="25dp"
+            android:background="@color/hortaviva_secondary"
+            app:layout_constraintStart_toStartOf="@id/imagem_mista_radio_loja"
+            app:layout_constraintTop_toBottomOf="@id/imagem_mista_radio_loja" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mista"
+            android:textColor="@color/hortaviva"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/base_texto_radio3_itens"
+            app:layout_constraintStart_toStartOf="@id/base_texto_radio3_itens"
+            app:layout_constraintTop_toTopOf="@id/base_texto_radio3_itens" />
+
+        <TextView
+            android:id="@+id/descricao_itens_radio_mista_loja"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:textColor="@color/hortaviva"
+            android:text="Banana Prata (600gr - 800gr) \nLimão Taiti (500gr) \nLaranja Pera (800gr) \nMexerica Bergamota (600gr)  \nErva Cidreira (Uni) \nRúcula (uni) \nCouve Flor (uni)"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="@id/imagem_mista_radio_loja"
+            app:layout_constraintStart_toEndOf="@id/imagem_mista_radio_loja"/>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_grupo2" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/windowBackground"
+            app:itemIconTint="@color/hortaviva"
+            app:itemTextColor="@color/hortaviva"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu"
+            tools:layout_editor_absoluteY="681dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
