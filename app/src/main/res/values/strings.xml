@@ -60,5 +60,6 @@
     <string name="identificador_loja">Loja</string>
     <string name="identificador_perfil">Perfil</string>
     <string name="identificador_agendamento">Agendamento</string>
+    <string name="title_activity_bottom_fragment">BottomFragment</string>
 
 </resources>

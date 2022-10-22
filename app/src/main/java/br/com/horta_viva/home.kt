@@ -22,8 +22,9 @@ class home : AppCompatActivity() {
         //Logout
         binding.buttonLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
-            val voltarTelaLogin = Intent(this, MainActivity::class.java)
+            val voltarTelaLogin = Intent(this, loginColaborador::class.java)
             startActivity(voltarTelaLogin)
+            finish()
         }
 
         //botão perfil
@@ -33,7 +34,7 @@ class home : AppCompatActivity() {
         buttonPerfil.setOnClickListener {
             val i = Intent(this, Colaborador::class.java)
             startActivity(i)
-            finish()
+
         }
 
         //botão Agendamento
@@ -43,7 +44,7 @@ class home : AppCompatActivity() {
         buttonAgendamento.setOnClickListener {
             val i = Intent(this, agendamento::class.java)
             startActivity(i)
-            finish()
+
         }
 
         //botão Loja
@@ -53,7 +54,7 @@ class home : AppCompatActivity() {
         buttonLoja.setOnClickListener {
             val i = Intent(this, loja::class.java)
             startActivity(i)
-            finish()
+
         }
     }
 
