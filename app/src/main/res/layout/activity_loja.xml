@@ -134,6 +134,7 @@
             app:layout_constraintTop_toBottomOf="@id/title_radio_cestas_loja">
 
             <RadioButton
+                android:onClick="onRadioButtonClicked"
                 android:id="@+id/radio_button_individual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,6 +145,7 @@
                 android:textStyle="bold" />
 
             <RadioButton
+                android:onClick="onRadioButtonClicked"
                 android:id="@+id/radio_button_casal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -156,6 +158,7 @@
                 android:textStyle="bold" />
 
             <RadioButton
+                android:onClick="onRadioButtonClicked"
                 android:id="@+id/radio_button_familia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -247,18 +250,21 @@
 
             <RadioButton
                 android:id="@+id/radio_button_frutas"
+                android:onClick="onRadioButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp" />
 
             <RadioButton
                 android:id="@+id/radio_button_legumes"
+                android:onClick="onRadioButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp" />
 
             <RadioButton
                 android:id="@+id/radio_button_mista"
+                android:onClick="onRadioButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp" />
@@ -337,7 +343,7 @@
             android:layout_width="170dp"
             android:layout_height="90dp"
             android:textColor="@color/hortaviva"
-            android:text="Brócols Japônes (uni) \nAlface Crespa (Uni) \nRepolho Liso (300gr - 450gr) \nErva Cidreira (Uni) \nRúcula (uni) \nCouve Flor (uni)"
+            android:text="Brócolis Japônes (uni) \nAlface Crespa (Uni) \nRepolho Liso (300gr - 450gr) \nErva Cidreira (Uni) \nRúcula (uni) \nCouve Flor (uni)"
             android:textSize="12sp"
             android:layout_marginStart="20dp"
             app:layout_constraintTop_toTopOf="@id/imagem_legumes_radio_loja"
@@ -382,6 +388,131 @@
             app:layout_constraintTop_toTopOf="@id/imagem_mista_radio_loja"
             app:layout_constraintStart_toEndOf="@id/imagem_mista_radio_loja"/>
 
+        <View
+            android:id="@+id/divider_loja2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/hortaviva"
+            app:layout_constraintTop_toBottomOf="@id/descricao_itens_radio_mista_loja" />
+
+        <TextView
+            android:id="@+id/text_radio_button_tipo_cesta_selected"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="--"
+            android:textStyle="bold"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja2" />
+
+        <TextView
+            android:id="@+id/text_radio_button_tipo_itens_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:text="--"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_radio_button_tipo_cesta_selected" />
+
+        <TextView
+            android:id="@+id/value_radio_button_tipo_cesta_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="R$0,00"
+            android:textStyle="bold"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja2" />
+
+        <TextView
+            android:id="@+id/value_frete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="6dp"
+            android:text="Frete R$0,00"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/value_radio_button_tipo_cesta_selected" />
+
+        <View
+            android:id="@+id/divider_loja3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/hortaviva"
+            app:layout_constraintTop_toBottomOf="@id/text_radio_button_tipo_itens_selected" />
+
+        <TextView
+            android:id="@+id/txt_pedido_unitario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Pedido Unitário"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja3" />
+
+        <TextView
+            android:id="@+id/value_pedido_unitario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:text="R$0,00"
+            android:textStyle="bold"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_pedido_unitario" />
+
+        <TextView
+            android:id="@+id/text_total_value_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Total"
+            android:textStyle="bold"
+            android:textColor="@color/hortaviva"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_incluir_carrinho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button4"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:text="Incluir no carrinho"
+            android:textColor="@color/hortaviva"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/value_pedido_unitario"
+            />
+
+
 
 
 
@@ -390,7 +521,7 @@
             android:layout_height="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radio_grupo2" />
+            app:layout_constraintTop_toBottomOf="@+id/button_incluir_carrinho" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
