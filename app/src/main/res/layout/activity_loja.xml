@@ -462,16 +462,40 @@
             android:id="@+id/txt_pedido_unitario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Pedido Unitário"
+            android:textColor="@color/hortaviva"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_pedido_mensal"
+            app:layout_constraintTop_toBottomOf="@id/divider_loja3" />
+
+        <TextView
+            android:id="@+id/value_pedido_unitario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="R$0,00"
+            android:textColor="@color/hortaviva"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txt_pedido_unitario"
+            app:layout_constraintTop_toBottomOf="@id/txt_pedido_unitario" />
+
+        <TextView
+            android:id="@+id/txt_pedido_mensal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
-            android:text="Pedido Unitário"
+            android:text="Pedido Mensal"
             android:textColor="@color/hortaviva"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider_loja3" />
 
         <TextView
-            android:id="@+id/value_pedido_unitario"
+            android:id="@+id/value_pedido_mensal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -483,6 +507,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_pedido_unitario" />
 
+
         <TextView
             android:id="@+id/text_total_value_pedido"
             android:layout_width="wrap_content"
@@ -490,9 +515,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:text="Total"
-            android:textStyle="bold"
             android:textColor="@color/hortaviva"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider_loja3" />
 

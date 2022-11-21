@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Horta_viva"
         tools:targetApi="31">
         <activity
-            android:name=".carrinho"
+            android:name=".Carrinho"
             android:exported="false" />
         <activity
             android:name=".BottomFragment"

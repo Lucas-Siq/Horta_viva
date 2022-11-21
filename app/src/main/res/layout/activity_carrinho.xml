@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
-    android:layout_height="600dp"
-    tools:context=".carrinho"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:paddingBottom="20dp"
+    android:fillViewport="true"
     android:background="@drawable/bg_custom_modal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Carrinho">
+
 
     <TextView
         android:id="@+id/identificador_loja"
@@ -23,18 +31,246 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/button_close_carrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
     <View
         android:id="@+id/baseboxcarrinho"
         android:layout_width="333dp"
         android:layout_height="400dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/baseboxcompra"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
+        android:background="@drawable/baseboxcompra2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/identificador_loja" />
 
+    <TextView
+        android:id="@+id/date_atual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/hortaviva"
+        android:textSize="16dp"
+        app:layout_constraintTop_toTopOf="@id/baseboxcarrinho"
+        app:layout_constraintStart_toStartOf="@id/baseboxcarrinho"
+        />
+
+    <ImageView
+        android:id="@+id/button_close_carrinho2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintTop_toTopOf="@id/baseboxcarrinho"
+        app:layout_constraintEnd_toEndOf="@id/baseboxcarrinho"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:id="@+id/text_radio_button_tipo_cesta_selected_carrinho"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/hortaviva"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:text="asdasdas"
+
+        app:layout_constraintStart_toStartOf="@+id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@id/date_atual" />
+
+     <TextView
+        android:id="@+id/text_radio_button_tipo_itens_selected_carriniho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/hortaviva"
+         android:text="asdasdas"
+         android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@id/text_radio_button_tipo_cesta_selected_carrinho" />
+
+    <TextView
+        android:id="@+id/peso_cesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:text="asdasdas"
+        android:textColor="@color/hortaviva"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@id/text_radio_button_tipo_itens_selected_carriniho" />
+
+    <RadioGroup
+        android:id="@+id/radio_grupo2"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@id/peso_cesta">
+
+        <RadioButton
+            android:id="@+id/radio_button_pedido_unitario"
+            android:onClick="onRadioButtonClickedfinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pedido Unitário"
+            android:textSize="20dp"
+            android:paddingBottom="25dp"
+            android:textColor="@color/hortaviva"
+            android:layout_marginTop="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_button_pedido_mensal"
+            android:onClick="onRadioButtonClickedfinal"
+            android:text="Pedido Mensal"
+            android:textSize="20dp"
+            android:paddingBottom="25dp"
+            android:textColor="@color/hortaviva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/value_pedido_mensal_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$0,00"
+        android:textColor="@color/hortaviva"
+        android:textStyle="bold"
+        android:layout_marginStart="33dp"
+        android:textSize="20dp"
+        android:layout_marginTop="-23dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_grupo2"
+        app:layout_constraintStart_toStartOf="@id/radio_grupo2"/>
+
+    <TextView
+        android:id="@+id/value_pedido_unitario_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$0,00"
+        android:textColor="@color/hortaviva"
+        android:textStyle="bold"
+        android:layout_marginStart="33dp"
+        android:textSize="20dp"
+        android:layout_marginTop="-95dp"
+        app:layout_constraintTop_toBottomOf="@id/radio_grupo2"
+        app:layout_constraintStart_toStartOf="@id/radio_grupo2"/>
+
+    <TextView
+        android:id="@+id/title_carteiracarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_carteira_colaboradorActivity"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@id/baseboxcarrinho" />
+
+    <TextView
+        android:id="@+id/values_carteira_carrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/valor_carteira_colaboradorActivity"
+        android:textColor="@color/hortaviva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/baseboxcarrinho"
+        app:layout_constraintTop_toTopOf="@+id/title_carteiracarrinho" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressBarcarrinho"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:max="100"
+        android:progress="33"
+        android:progressBackgroundTint="@color/hortaviva_fourth"
+        android:progressTint="@color/hortaviva"
+        android:scaleX="0.9"
+        android:scaleY="4"
+        app:layout_constraintEnd_toEndOf="@+id/baseboxcarrinho"
+        app:layout_constraintStart_toStartOf="@+id/baseboxcarrinho"
+        app:layout_constraintTop_toBottomOf="@+id/title_carteiracarrinho" />
+
+
+    <View
+        android:id="@+id/divider_loja4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/hortaviva"
+        app:layout_constraintTop_toBottomOf="@id/progressBarcarrinho" />
+
+
+    <TextView
+        android:id="@+id/value_pedido_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="R$0,00"
+        android:textStyle="bold"
+        android:textColor="@color/hortaviva"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_loja4" />
+
+
+    <TextView
+        android:id="@+id/text_total_value_pedido_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Total"
+        android:textColor="@color/hortaviva"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_loja4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_incluir_carrinho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button4"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="Comprar"
+        android:textColor="@color/hortaviva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_total_value_pedido_final"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
