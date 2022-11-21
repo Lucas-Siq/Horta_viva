@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 import br.com.horta_viva.databinding.ActivityHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
@@ -55,6 +56,28 @@ class home : AppCompatActivity() {
             val i = Intent(this, loja::class.java)
             startActivity(i)
 
+        }
+
+        //loja
+        val buttonquero1: AppCompatButton = findViewById<AppCompatButton>(R.id.button_compra_home1)
+
+        buttonquero1.setOnClickListener {
+            val i = Intent(this, loja::class.java)
+            startActivity(i)
+        }
+
+        val buttonquero2: AppCompatButton = findViewById<AppCompatButton>(R.id.button_compra_home2)
+
+        buttonquero2.setOnClickListener {
+            val i = Intent(this, loja::class.java)
+            startActivity(i)
+        }
+
+        val buttonquero3: AppCompatButton = findViewById<AppCompatButton>(R.id.button_compra_home3)
+
+        buttonquero3.setOnClickListener {
+            val i = Intent(this, loja::class.java)
+            startActivity(i)
         }
     }
 

@@ -126,7 +126,7 @@
 
         <RadioButton
             android:id="@+id/radio_button_pedido_unitario"
-            android:onClick="onRadioButtonClickedfinal"
+            android:onClick="onRadioButtonClicked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pedido Unitário"
@@ -137,7 +137,7 @@
 
         <RadioButton
             android:id="@+id/radio_button_pedido_mensal"
-            android:onClick="onRadioButtonClickedfinal"
+            android:onClick="onRadioButtonClicked"
             android:text="Pedido Mensal"
             android:textSize="20dp"
             android:paddingBottom="25dp"
@@ -174,6 +174,19 @@
         app:layout_constraintTop_toBottomOf="@id/radio_grupo2"
         app:layout_constraintStart_toStartOf="@id/radio_grupo2"/>
 
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_agendamento"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/baseboxcarrinho"
+        app:layout_constraintStart_toStartOf="@id/baseboxcarrinho"
+        app:layout_constraintEnd_toEndOf="@id/baseboxcarrinho"
+        android:background="@drawable/container_form4"
+        android:entries="@array/DiadoMes"
+        android:gravity="center_vertical"/>
+
+
     <TextView
         android:id="@+id/title_carteiracarrinho"
         android:layout_width="wrap_content"
@@ -184,7 +197,7 @@
         android:textColor="@color/hortaviva"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/baseboxcarrinho"
-        app:layout_constraintTop_toBottomOf="@id/baseboxcarrinho" />
+        app:layout_constraintTop_toBottomOf="@id/spinner_agendamento" />
 
     <TextView
         android:id="@+id/values_carteira_carrinho"

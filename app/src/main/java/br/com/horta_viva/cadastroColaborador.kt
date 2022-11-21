@@ -154,4 +154,3 @@ class cadastroColaborador : AppCompatActivity() {
     }
 
 }
-

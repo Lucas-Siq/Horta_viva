@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContentProviderCompat.requireContext
 import br.com.horta_viva.databinding.ActivityCarrinhoBinding
 import br.com.horta_viva.databinding.ActivityColaboradorBinding
 import br.com.horta_viva.databinding.ActivityLojaBinding
@@ -85,10 +86,20 @@ class loja : AppCompatActivity() {
         sheetBinding.valuePedidoUnitarioFinal.text = binding.valuePedidoUnitario.text
         sheetBinding.valuePedidoMensalFinal.text = binding.valuePedidoMensal.text
 
+
+        fun onRadioButtonClicked(){
+            if (sheetBinding.radioButtonPedidoUnitario.isChecked) {
+                sheetBinding.valuePedidoFinal.text =
+                    binding.valuePedidoUnitario.text
+            } else if (sheetBinding.radioButtonPedidoMensal.isChecked) {
+                sheetBinding.valuePedidoFinal.text =
+                    binding.valuePedidoMensal.text
+            }
+        }
+
         dialog.setContentView(sheetBinding.root)
         dialog.show()
     }
-
 
 
     fun onRadioButtonClicked(view: View) {
